@@ -2,13 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
-        <item android:id="@+id/nav_about" android:icon="@android:drawable/ic_menu_camera"
+        <item android:id="@+id/nav_about" android:icon="@android:drawable/ic_menu_info_details"
             android:title="What is Breast Cancer?" />
-        <item android:id="@+id/nav_cause" android:icon="@android:drawable/ic_menu_gallery"
+        <item android:id="@+id/nav_cause" android:icon="@android:drawable/ic_menu_info_details"
             android:title="Causes" />
-        <item android:id="@+id/nav_symptoms" android:icon="@android:drawable/ic_menu_slideshow"
+        <item android:id="@+id/nav_symptoms" android:icon="@android:drawable/ic_menu_info_details"
             android:title="Symptoms" />
-        <item android:id="@+id/nav_prevention" android:icon="@android:drawable/ic_menu_manage"
+        <item android:id="@+id/nav_prevention" android:icon="@android:drawable/ic_menu_info_details"
             android:title="Prevention" />
         <item android:id="@+id/nav_charities" android:icon="@android:drawable/ic_menu_help"
             android:title="Charities/Research Institutes"/>
@@ -17,5 +17,4 @@
         <item android:id="@+id/nav_contact" android:icon="@android:drawable/ic_menu_help"
             android:title="Contact Us"/>
     </group>
-
 </menu>
