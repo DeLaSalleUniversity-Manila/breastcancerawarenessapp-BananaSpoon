@@ -9,11 +9,23 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_about" tools:context="com.example.christian.bca.about">
 
+    <ScrollView
+        android:id="@+id/SonucScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" >
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tv_about"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="Breast Cancer is bad" />
+        android:text="Breast cancer is a malignant tumor which started from the cells in the breast area. It occurs mostly in females, but can also affect men. It is the most common cancer in females.
+
+        \n\nBreast cancer can either be invasive or non-invasive. For invasive breast cancer, the cancer cells break out and invade the nearby tissue. While for the non-invasive breast cancer, the cancer cells stay in its place of origin, but can also develop into invasive breast cancer.
+" />
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </ScrollView>
+
 </RelativeLayout>

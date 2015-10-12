@@ -9,4 +9,26 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_causes" tools:context="com.example.christian.bca.causes">
 
+    <ScrollView
+        android:id="@+id/SonucScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_about"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="The causes of breast cancer have not been definitively pointed out, but there are some risk factors which will be discussed in this section.
+
+            \n\nOne risk factor is that breast cancer can be inherited. Another is that women with history of the disease are more likely to develop another type of cancer, than women who don’t. Dense breast tissue, estrogen exposure, obesity, height, and alcohol consumption are just some of the risk factors of breast cancer. Others include radiation exposure, hormone replacement therapy, and cosmetic implants.
+
+" />
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </ScrollView>
+
+
+
 </RelativeLayout>

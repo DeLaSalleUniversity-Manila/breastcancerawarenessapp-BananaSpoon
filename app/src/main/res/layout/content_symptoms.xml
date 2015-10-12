@@ -9,4 +9,22 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_symptoms" tools:context="com.example.christian.bca.symptoms">
 
+
+    <ScrollView
+        android:id="@+id/SonucScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_about"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="Some of the symptoms of breast cancer include the formation of lumps in the breast or armpit area, a rash on or around the nipple, skin dimpling, change in texture or skin color of the breast, change in how the nipple looks, and clear or bloody fluid leaking out of the nipple.
+
+        " />
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </ScrollView>
 </RelativeLayout>
