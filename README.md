@@ -12,3 +12,6 @@ Update 3: Added background, editted colors and icons
 ## Problem:
 
 Create an app which provides information about breast cancer using different activities.
+
+Update 1: Added Main Menu
+Update 2: Added Splash Screen 
