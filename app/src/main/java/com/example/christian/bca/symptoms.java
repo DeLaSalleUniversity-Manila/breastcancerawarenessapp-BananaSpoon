@@ -31,7 +31,6 @@ public class symptoms extends AppCompatActivity
             }
         });
     }
-<<<<<<< HEAD
 
     private void loadPhrases(){
         ESLPhrases = new ArrayList<String>();
@@ -42,18 +41,6 @@ public class symptoms extends AppCompatActivity
         }
     }
 
-=======
-
-    private void loadPhrases(){
-        ESLPhrases = new ArrayList<String>();
-        Scanner scan = new Scanner(getResources().openRawResource(R.raw.phrases));
-        while(scan.hasNextLine()){
-            String line = scan.nextLine();
-            ESLPhrases.add(line);
-        }
-    }
-
->>>>>>> origin/master
     private void selectedClick(int index){
         String text = ESLPhrases.get(index);
         if(ttsLoaded){
@@ -148,13 +135,10 @@ public class symptoms extends AppCompatActivity
             Intent eighth = new Intent(this, contact.class);
             startActivity(eighth);
             selectedClick(6);
-<<<<<<< HEAD
         }else if (id == R.id.nav_share) {
             Intent ninth = new Intent(this, share.class);
             startActivity(ninth);
             selectedClick(7);
-=======
->>>>>>> origin/master
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

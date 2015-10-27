@@ -73,14 +73,11 @@
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-<<<<<<< HEAD
         <activity
             android:name=".share"
             android:label="@string/title_activity_share"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-=======
->>>>>>> origin/master
     </application>
 
 </manifest>

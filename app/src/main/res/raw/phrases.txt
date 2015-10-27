@@ -4,9 +4,5 @@ Symptoms
 Prevention
 Charities or Research Institutes
 Help
-<<<<<<< HEAD
 Contact Us
 Share
-=======
-Contact Us
->>>>>>> origin/master
