@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.telephony.SmsManager;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,19 +16,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.media.MediaPlayer;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class MainActivity extends AppCompatActivity
-
+public class share extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
     private TextToSpeech tts;
     private ArrayList<String> ESLPhrases;
     private boolean ttsLoaded = false;
-
     private void initializeTTS(){
         tts = new TextToSpeech(this, new TextToSpeech.OnInitListener(){
             @Override
@@ -52,17 +53,23 @@ public class MainActivity extends AppCompatActivity
             tts.speak(text, TextToSpeech.QUEUE_FLUSH,null);
         }
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-
+        setContentView(R.layout.activity_share);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        Button button = (Button)findViewById(R.id.button);
 
-
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sharing = new Intent(Intent.ACTION_SEND);
+                sharing.setType("text/plain");
+                sharing.putExtra(Intent.EXTRA_TEXT, "I'm using the Breast Cancer Awareness App to learn more about Breast Cancer");
+                startActivity(Intent.createChooser(sharing, "Share using"));
+            }
+        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -89,7 +96,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.share, menu);
         return true;
     }
 
@@ -142,14 +149,31 @@ public class MainActivity extends AppCompatActivity
             Intent eighth = new Intent(this, contact.class);
             startActivity(eighth);
             selectedClick(6);
-        }else if (id == R.id.nav_share) {
+        }else if (id == R.id.nav_share){
             Intent ninth = new Intent(this, share.class);
             startActivity(ninth);
-            selectedClick(7);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+    public void sendSMSMessage(View view) {
+        Button sendBtn = (Button) findViewById(R.id.sendBtn);
+        EditText txtphoneNo = (EditText) findViewById(R.id.editText);
+        Log.i("Send SMS", "");
+        String phoneNo = txtphoneNo.getText().toString();
+        String message = "I'm using the Breast Cancer Awareness App to learn more about Breast Cancer ";
+
+        try {
+            SmsManager smsManager = SmsManager.getDefault();
+            smsManager.sendTextMessage(phoneNo, null, message, null, null);
+            Toast.makeText(getApplicationContext(), "SMS sent.", Toast.LENGTH_LONG).show();
+        }
+
+        catch (Exception e) {
+            Toast.makeText(getApplicationContext(), "SMS failed, please try again.", Toast.LENGTH_LONG).show();
+            e.printStackTrace();
+        }
     }
 }

@@ -16,6 +16,7 @@
             android:title="Help"/>
         <item android:id="@+id/nav_contact" android:icon="@android:drawable/ic_menu_help"
             android:title="Contact Us"/>
+        <item android:id="@+id/nav_share" android:icon="@android:drawable/ic_menu_help"
+            android:title="Share"/>
     </group>
-
 </menu>
