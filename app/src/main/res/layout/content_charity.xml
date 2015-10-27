@@ -20,6 +20,9 @@
             android:id="@+id/tv_about"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+
+            android:layout_marginTop="89dp"
             android:text="For local donations, please visit:
             \nwww.philcancer.org.ph
             \n\nFor international donations, please visit:
@@ -33,7 +36,7 @@
             \n\nTo find other cancer centers, please visit the following website:
             \nwww.cancer.gov/research/nci-role/cancer-centers/find
 
-" />
+"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     </ScrollView>

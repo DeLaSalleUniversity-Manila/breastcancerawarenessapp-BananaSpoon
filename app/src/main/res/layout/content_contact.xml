@@ -23,13 +23,16 @@
             android:id="@+id/tv_about"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:layout_marginTop="89dp"
             android:text="BCA Version 1.0
             \n\nFor inquiries, please contact:
             \nblahblahblah@gmail.com
             \n09179714610
 
             \n\nTHE BEST PROTECTION IS EARLY DETECTION
-" />
+"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     </ScrollView>

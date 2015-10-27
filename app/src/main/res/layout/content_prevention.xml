@@ -21,6 +21,9 @@
             android:id="@+id/tv_about"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+
+            android:layout_marginTop="89dp"
             android:text="Below are some of the ways to prevent or reduce the risk of breast cancer:
             \n\n1.	Limit alcohol intake
             \n 2.	Avoid smoke
@@ -28,9 +31,8 @@
             \n4.	Breast-feed your kids as long as possible
             \n5.	Be physically fit
             \n6.	Limit dose and duration of hormone therapy
-            \n7.	Avoid exposure to radiation and pollution
-            \n8.	Eat healthy
-" />
+
+"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     </ScrollView>

@@ -20,9 +20,12 @@
             android:id="@+id/tv_about"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:layout_marginTop="89dp"
             android:text="For emergencies in the Philippines, please dial 117.
             \nFor emergencies in the US, please contact 911.
-" />
+"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     </ScrollView>
