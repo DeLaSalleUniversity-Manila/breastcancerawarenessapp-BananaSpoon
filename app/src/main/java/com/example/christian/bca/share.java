@@ -66,7 +66,7 @@ public class share extends AppCompatActivity
             public void onClick(View v) {
                 Intent sharing = new Intent(Intent.ACTION_SEND);
                 sharing.setType("text/plain");
-                sharing.putExtra(Intent.EXTRA_TEXT, "I'm using the Breast Cancer Awareness App to learn more about Breast Cancer");
+                sharing.putExtra(Intent.EXTRA_TEXT, "I'm using Think Pink to learn more about Breast Cancer");
                 startActivity(Intent.createChooser(sharing, "Share using"));
             }
         });
@@ -163,7 +163,7 @@ public class share extends AppCompatActivity
         EditText txtphoneNo = (EditText) findViewById(R.id.editText);
         Log.i("Send SMS", "");
         String phoneNo = txtphoneNo.getText().toString();
-        String message = "I'm using the Breast Cancer Awareness App to learn more about Breast Cancer ";
+        String message = "I'm using Think Pink to learn more about Breast Cancer ";
 
         try {
             SmsManager smsManager = SmsManager.getDefault();
