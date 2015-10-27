@@ -168,10 +168,13 @@ public class about extends AppCompatActivity
             Intent eighth = new Intent(this, contact.class);
             startActivity(eighth);
             selectedClick(6);
+<<<<<<< HEAD
         }else if (id == R.id.nav_share) {
             Intent ninth = new Intent(this, share.class);
             startActivity(ninth);
             selectedClick(7);
+=======
+>>>>>>> origin/master
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
